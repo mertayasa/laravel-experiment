@@ -1,0 +1,24 @@
+models:
+  Destination:
+    title: string:50
+    description: longtext
+    image: string:100
+    price: integer
+    is_open: tinyInteger default:0
+controllers:
+  Destination:
+    index:
+      query: all
+      render: destination.index with:destinations
+    create:
+      render: destination.create
+    store:
+      validate: title, description, image, price, is_open
+      save: destination
+      redirect: destination.index
+    edit:
+      render: destination.edit with:destination
+    update:
+      validate: title, description, image, price, is_open
+      update: destination
+      redirect: destination.index

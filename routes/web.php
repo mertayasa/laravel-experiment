@@ -19,3 +19,7 @@ Route::get('/', function () {
 
 
 Route::resource('post', App\Http\Controllers\PostController::class)->only('index', 'store');
+Route::resource('destination', App\Http\Controllers\DestinationController::class)->except('show', 'destroy');
+
+
+Route::resource('destination', App\Http\Controllers\DestinationController::class)->except('show', 'destroy');

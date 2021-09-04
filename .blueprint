@@ -1,15 +1,6 @@
-created:
-    - app/Http/Controllers/PostController.php
-    - database/factories/PostFactory.php
-    - database/migrations/2021_08_20_031205_create_posts_table.php
-    - app/Models/Post.php
-    - tests/Feature/Http/Controllers/PostControllerTest.php
-    - app/Events/NewPost.php
-    - app/Http/Requests/PostStoreRequest.php
-    - app/Jobs/SyncMedia.php
-    - app/Notification/ReviewNotification.php
-    - resources/views/post/index.blade.php
-updated:
-    - routes/web.php
+created: 'app/Http/Controllers/DestinationController.php database/factories/DestinationFactory.php database/migrations/2021_08_20_040125_create_destinations_table.php app/Models/Destination.php tests/Feature/Http/Controllers/DestinationControllerTest.php'
+updated: routes/web.php
 models:
-    Post: { title: 'string:400', content: longtext, published_at: 'nullable timestamp' }
+    Destination: {  }
+    Post: {  }
+    User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string:100 nullable' }
