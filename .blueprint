@@ -1,6 +1,9 @@
-created: 'app/Http/Controllers/DestinationController.php database/factories/DestinationFactory.php database/migrations/2021_08_20_040125_create_destinations_table.php app/Models/Destination.php tests/Feature/Http/Controllers/DestinationControllerTest.php'
-updated: routes/web.php
+created:
+    - database/factories/CommentFactory.php
+    - database/migrations/2021_09_04_082158_create_comments_table.php
+    - app/Models/Comment.php
 models:
     Destination: {  }
     Post: {  }
     User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string:100 nullable' }
+    Comment: { post_id: unsignedBigInteger, comment: 'string:400', relationships: { belongsTo: Post, hasMany: Media } }

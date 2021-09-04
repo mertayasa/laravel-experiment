@@ -1,0 +1,7 @@
+models:
+  Comment:
+    post_id: unsignedBigInteger
+    comment: string:400
+    relationships:
+      belongsTo: Post
+      hasMany: Media
