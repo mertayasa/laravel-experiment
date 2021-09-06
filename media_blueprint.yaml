@@ -1,0 +1,7 @@
+models:
+  Media:
+    post_id: unsignedBigInteger foreign:posts.id
+    image: text
+    relationships:
+      belongsTo: Post
+      hasMany: Media

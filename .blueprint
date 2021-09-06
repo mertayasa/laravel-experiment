@@ -1,9 +1,10 @@
 created:
-    - database/factories/CommentFactory.php
-    - database/migrations/2021_09_04_082158_create_comments_table.php
-    - app/Models/Comment.php
+    - database/factories/MediaFactory.php
+    - database/migrations/2021_09_04_082923_create_media_table.php
+    - app/Models/Media.php
 models:
     Destination: {  }
     Post: {  }
     User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string:100 nullable' }
     Comment: { post_id: unsignedBigInteger, comment: 'string:400', relationships: { belongsTo: Post, hasMany: Media } }
+    Media: { post_id: 'unsignedBigInteger foreign:posts.id', image: text, relationships: { belongsTo: Post, hasMany: Media } }
